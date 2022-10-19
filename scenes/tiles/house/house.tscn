@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/tiles/house/house-sprite-frames.tres" type="SpriteFrames" id=1]
+[ext_resource path="res://scenes/tiles/tile.gd" type="Script" id=2]
+
+[node name="HouseA-" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Sprite" type="AnimatedSprite" parent="."]
+z_index = 4
+frames = ExtResource( 1 )
+playing = true
+offset = Vector2( 8, 8 )
