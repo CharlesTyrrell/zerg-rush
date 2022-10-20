@@ -23,13 +23,14 @@ func _process(_delta):
 			$Sprite.flip_h = false
 			
 			timer = 1
+		
 		if(timer > move_time_start && timer % move_time_iter == 0):
 			position.x += snap
 	
 	if Input.is_action_pressed("ui_left"):
 		if Input.is_action_just_pressed("ui_left"):
 			position.x -= snap
-			$Sprite.flip_h = false
+			$Sprite.flip_h = true
 			
 			timer = 1
 		
@@ -39,7 +40,6 @@ func _process(_delta):
 	if Input.is_action_pressed("ui_down"):
 		if Input.is_action_just_pressed("ui_down"):
 			position.y += snap
-			$Sprite.flip_h = false
 			
 			timer = 1
 		
@@ -50,11 +50,8 @@ func _process(_delta):
 	if Input.is_action_pressed("ui_up"):
 		if Input.is_action_just_pressed("ui_up"):
 			position.y -= snap
-			$Sprite.flip_h = false
 			
 			timer = 1
-		
-		
 		if(timer > move_time_start && timer % move_time_iter == 0):
 			
 			position.y -= snap
@@ -62,18 +59,6 @@ func _process(_delta):
 
 
 
-	if Input.is_action_just_pressed("ui_left"):
-		move_dir = L
-		position.x -= snap
-		$Sprite.flip_h = true
-	if Input.is_action_just_pressed("ui_down"):
-		move_dir = D
-		position.y += snap
-	if Input.is_action_just_pressed("ui_up"):
-		move_dir = U
-		position.y -= snap
-		
-	
 
 #
 #func _unhandled_input(event):
