@@ -13,6 +13,7 @@ const move_time_iter = move_time_step
 
 
 var vel_mag : float = 0.0
+#var bullet = preload("res://scenes/temporary/bullet.tscn")
 var snap = load("res://global/StaticValues.gd").CELL_LENGTH
 var move_dir : int
 var timer : int
@@ -36,10 +37,19 @@ func _physics_process(delta):
 	get_input()
 	velocity = move_and_slide(velocity)
 
+	if Input.is_action_just_pressed("ui_left_click"):
+		var mouse_pos =get_global_mouse_position()
+		var new_bullet = Bullet.new(global_position, Vector2(mouse_pos.x - global_position.x, mouse_pos.y - global_position.y)) #bullet_velocity
+		add_child(new_bullet)
+
+		print("Bullet shot")
 
 
 
-
+func _input(event):
+	pass
+	# Detect event based on Input Map value
+	
 
 #func _process(_delta):
 #	timer += 1
