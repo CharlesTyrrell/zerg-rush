@@ -22,6 +22,7 @@ StaticValues="*res://global/StaticValues.gd"
 
 window/size/width=360
 window/size/height=240
+window/size/resizable=false
 window/size/test_width=1840
 window/size/test_height=920
 window/vsync/use_vsync=false
