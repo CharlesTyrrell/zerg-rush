@@ -9,13 +9,19 @@
 config_version=4
 
 _global_script_classes=[ {
-"base": "Node2D",
+"base": "KinematicEntity",
 "class": "Bullet",
 "language": "GDScript",
 "path": "res://scenes/temporary/bullet.gd"
+}, {
+"base": "KinematicBody2D",
+"class": "KinematicEntity",
+"language": "GDScript",
+"path": "res://scenes/entities/kinematicEntity.gd"
 } ]
 _global_script_class_icons={
-"Bullet": ""
+"Bullet": "",
+"KinematicEntity": ""
 }
 
 [application]
@@ -30,9 +36,8 @@ StaticValues="*res://global/StaticValues.gd"
 
 [display]
 
-window/size/width=360
+window/size/width=352
 window/size/height=240
-window/size/resizable=false
 window/size/test_width=1840
 window/size/test_height=920
 window/vsync/use_vsync=false

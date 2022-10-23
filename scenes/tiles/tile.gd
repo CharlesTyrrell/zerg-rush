@@ -7,6 +7,12 @@ enum{
 var snap = load("res://global/StaticValues.gd").CELL_LENGTH
 
 
+func place(position : Vector2):
+	self.position.x = stepify(position.x, 16) + 8
+	self.position.y = stepify(position.y, 16) + 8
+
+
+
 func move(dir : int):
 	match dir:
 		R:

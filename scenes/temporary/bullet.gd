@@ -1,33 +1,34 @@
-extends Node2D
-
-
+extends KinematicEntity
 class_name Bullet
 
-const LIFETIME : float = 6.0 #in meters
-const SPEED : float = 20.0 # in m/s
+const LIFETIME : float = 100.0 #in meters
+var COLLISION = load("res://scenes/temporary/bullet.tscn")
 
+var collision_instance : Area2D
 
-var direction : Vector2 = Vector2.UP
 var timer: Timer = Timer.new()
 
 #
 func _init(position : Vector2, direction : Vector2):
 	self.global_position = position
-	self.direction = direction.normalized() * SPEED
+	speed = 200
+	velocity = direction.normalized() * speed
 	self.z_index = 12
 
+
 func _ready():
-	var texture = load("res://assets/sprites/bullet.png")
-	var sprite = Sprite.new()
-	sprite.texture = texture
-	add_child(sprite)
-	add_child(timer)
+	collision_instance = COLLISION.instance()
+	add_child(collision_instance)
 	timer.connect("timeout", self, "queue_free")
-	timer.start(LIFETIME/SPEED)
-	print("Hello")
+	timer.start(LIFETIME/speed)
 	set_as_toplevel(true)
+	collision_instance.connect("body_entered", self, "bullet_hit")
 
-func _physics_process(delta):
-	global_position.x += direction.x * SPEED * delta
-	global_position.y += direction.y * SPEED * delta
 
+func bullet_hit():
+	print("asdfasfdsdf")
+	bullet_hit_animation()
+	queue_free()
+
+func bullet_hit_animation():
+	pass
