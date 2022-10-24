@@ -3,6 +3,14 @@ extends KinematicEntity
 
 
 var timer : int
+signal player_dead
+
+func _ready():
+	action_snap_camera_pos()
+	var main_scene = get_parent()
+	print(main_scene)
+	connect("player_dead", main_scene, "game_over")
+	
 
 func check_actions():
 	action_shoot()
@@ -52,5 +60,5 @@ func action_snap_camera_pos():
 func _on_hit_from_zombie(area):
 	
 	print("game over")
-	
+	emit_signal("player_dead")
 	
