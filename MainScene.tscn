@@ -30,4 +30,9 @@ tile_data = PoolIntArray( -2031656, 8, 0, -2031655, 8, 0, -2031654, 8, 0, -20316
 [node name="HouseA-" parent="house-collection" instance=ExtResource( 3 )]
 
 [node name="Monsters" type="Node2D" parent="."]
+position = Vector2( 0, 1 )
 script = ExtResource( 7 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+volume_db = -14.517
+autoplay = true

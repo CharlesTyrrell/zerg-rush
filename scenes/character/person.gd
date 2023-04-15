@@ -10,11 +10,19 @@ func _ready():
 	var main_scene = get_parent()
 	print(main_scene)
 	connect("player_dead", main_scene, "game_over")
-	
+
+
+
+
+
+
+
+
 
 func check_actions():
 	action_shoot()
 	action_snap_camera_pos()
+
 
 func get_input():
 	velocity = Vector2()
@@ -27,6 +35,12 @@ func get_input():
 	if Input.is_action_pressed("ui_up"):
 		velocity.y -= 1
 	velocity = velocity.normalized() * speed
+
+
+
+
+
+
 
 
 const SHOOT_ITER = 10

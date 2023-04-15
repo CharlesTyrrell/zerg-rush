@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/crazyc.mp3-facad8177e92821695ed8e0d0af887aa.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/music/crazyc.mp3"
+dest_files=[ "res://.import/crazyc.mp3-facad8177e92821695ed8e0d0af887aa.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

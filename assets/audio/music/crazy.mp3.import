@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/crazy.mp3-5070a054a010a9de43f4e478ad00a870.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/music/crazy.mp3"
+dest_files=[ "res://.import/crazy.mp3-5070a054a010a9de43f4e478ad00a870.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
