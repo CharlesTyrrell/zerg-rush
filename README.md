@@ -10,4 +10,4 @@ a game jam game, retro zerg rush style game
 ## Note
 - Game is not yet quite finished, more of a prototype. Was meant to be created in a short amount of time
 
-![Picture Of Game](./GameOver.png)
+![Picture Of Game](./start.png)
