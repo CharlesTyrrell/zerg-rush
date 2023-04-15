@@ -56,17 +56,26 @@ func action_shoot():
 		
 		if(timer % SHOOT_ITER == 0):
 			action_create_bullet()
-
+			
+"""
 func action_create_bullet():
-	var mouse_pos =get_global_mouse_position()
+	var mouse_pos = get_global_mouse_position()
+	var new_bullet = Bullet.new(position, Vector2(mouse_pos.x - position.x, mouse_pos.y - position.y)) #bullet_velocity
+	add_child(new_bullet)
+
+	print("Bullet shot")
+
+"""
+func action_create_bullet():
+	var mouse_pos = get_global_mouse_position()
 	var new_bullet = Bullet.new(global_position, Vector2(mouse_pos.x - global_position.x, mouse_pos.y - global_position.y)) #bullet_velocity
 	add_child(new_bullet)
 
 	print("Bullet shot")
 
 func action_snap_camera_pos():
-	$Camera2D.position.x = stepify(global_position.x, 352) + 8 # stepify(global_position.x, 352) + 8
-	$Camera2D.position.y = stepify(global_position.y, 240) + 8 #stepify(global_position.y, 240) + 8
+	$Camera2D.position.x = stepify(position.x, 352) + 8 # stepify(global_position.x, 352) + 8
+	$Camera2D.position.y = stepify(position.y, 240) + 8 #stepify(global_position.y, 240) + 8
 
 
 

@@ -13,7 +13,6 @@ __meta__ = {
 }
 
 [node name="Camera2D" type="Camera2D" parent="."]
-visible = false
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2( 0, 8 )
