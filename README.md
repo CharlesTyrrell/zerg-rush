@@ -6,7 +6,9 @@ a game jam game, retro zerg rush style game
 - Download Godot3
 - Open Godot, click the 'Import' button, and use the cloned repo
 - Open The newely created project, and press the 'play' button in the top right hand part of the editor
-- Enjoy
+- Move with the wasd keys,shoot w/ mouse
+- Enjoy!
+
 ## Note
 - Game is not yet quite finished, more of a prototype. Was meant to be created in a short amount of time
 
